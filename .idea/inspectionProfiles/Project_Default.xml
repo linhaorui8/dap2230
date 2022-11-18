@@ -1,0 +1,51 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E231" />
+          <option value="E265" />
+          <option value="E501" />
+          <option value="E303" />
+          <option value="E228" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="SafeDriver.drivers.driver" />
+          <option value="sms_webselenium.sms_testcase.test_smsLogin.test_Login.driver" />
+          <option value="sms_webselenium.sms_testcase.test_smsLogin.Test_Login.login" />
+          <option value="sms_webselenium.sms_keyword.keyword.WebKeys.value" />
+          <option value="sms_webselenium.sms_keyword.keyword.WebKeys.by" />
+          <option value="sms_webselenium.sms_logic.sms_LoginPage.expect_text" />
+          <option value="sms_webselenium.sms_testcase.test_smsLogin.browser" />
+          <option value="sms_webselenium.sms_testcase.test_smsLogin.driver" />
+          <option value="sms_webselenium.conftest.driver" />
+          <option value="requests.packages" />
+          <option value="SMSAPI_management.testcase.test_smshomeapi.webkit_login" />
+          <option value="requests.models.Response.*" />
+          <option value="SMSAPI_management.logic.smscomponentList.SmsComponentList.httpclient" />
+          <option value="str.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
