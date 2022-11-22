@@ -12,6 +12,7 @@ print(path)
 def load_yaml(file_path):
     try:
         data_file_path = os.path.join(path, 'dap_data', file_path)
+        print(data_file_path)
         with open(data_file_path, mode='r', encoding='utf-8') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
     except Exception as e:
@@ -31,6 +32,9 @@ def write_yaml(values):
         print('写入yaml文件异常', e)
     finally:
         tf.close()
+if __name__ == '__main__':
+    aa =load_yaml('login.yaml')
+    print(aa['login_url']['url'])
 
 #
 # dics = {"get_header": {'X-CSRF-TOKEN': 'f52ae5f4-a236-4360-89bf-0c84231d5e97-36602184',
@@ -49,15 +53,15 @@ def write_yaml(values):
 # print(data['home_url'])
 # data = load_yaml('login.yaml')
 # print(data['login_data'])
-path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#report_file = r'2022-11-04 18-report.html'
-current_date = datetime.datetime.now().strftime("%Y-%m-%d %H")
-report_dir = r'report'  # 保存路径
-report_file = current_date + r'-report.html'
-report_file_path = os.path.join(path, r'testcase\report', report_file)
-print(report_file_path)
-email_file = r'email.ini'
-email_file_path = os.path.join(path, r'api_base', email_file)
-print(email_file_path)
-datas=load_yaml('test.yaml')
-print(datas['a'])
+# path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# #report_file = r'2022-11-04 18-report.html'
+# current_date = datetime.datetime.now().strftime("%Y-%m-%d %H")
+# report_dir = r'report'  # 保存路径
+# report_file = current_date + r'-report.html'
+# report_file_path = os.path.join(path, r'testcase\report', report_file)
+# print(report_file_path)
+# email_file = r'email.ini'
+# email_file_path = os.path.join(path, r'api_base', email_file)
+# print(email_file_path)
+# datas=load_yaml('test.yaml')
+# print(datas['a'])

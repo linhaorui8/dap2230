@@ -1,0 +1,11 @@
+{
+    "get_header": {
+        "X-CSRF-TOKEN": "477f45ca-a86d-4793-9e29-9b23cdabe17e-63849260",
+        "Cookie": "JSESSIONID=6e5646d4-8c52-466a-8a44-2a473fcf5cd9-11244609"
+    },
+    "post_header": {
+        "X-CSRF-TOKEN": "477f45ca-a86d-4793-9e29-9b23cdabe17e-63849260",
+        "Cookie": "JSESSIONID=6e5646d4-8c52-466a-8a44-2a473fcf5cd9-11244609",
+        "Content-Type": "application/json;"
+    }
+}
