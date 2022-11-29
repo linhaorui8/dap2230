@@ -1,0 +1,5 @@
+choice_sources_url: "/back/dap/index/datasource/sources"
+addsource_url: "/back/dap/index/datasource"
+addsource_json: {"dbUseType":1,"srcId":10000,"remark":"1","state":1}
+addlogicalsource_url: "/back/dap/index/datasource"
+addlogicalsource_json:  {"dbUseType":2,"srcId":10000,"remark":"1","state":1}

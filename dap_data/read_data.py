@@ -6,13 +6,13 @@ import pickle
 import yaml
 
 path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(path)
+# print(path)
 
 
 def load_yaml(file_path):
     try:
         data_file_path = os.path.join(path, 'dap_data', file_path)
-        print(data_file_path)
+        #print(data_file_path)
         with open(data_file_path, mode='r', encoding='utf-8') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
     except Exception as e:

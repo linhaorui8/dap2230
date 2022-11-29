@@ -1,0 +1,4 @@
+approvepage_url: "/back/dap/index/approvalflow/page"
+approvepage_json: {"pageRequest":{"pageNo":1,"pageSize":20,"order":[{"prop":"id","asc":false}]}}
+approve_url: "/back/dap/index/approvalflow/approve/"
+approve_json: {"wfStatus":"1","remark":null}

@@ -3,7 +3,6 @@ import configparser
 import logging
 import os
 import time
-import yaml
 
 
 class Read_Config:
@@ -54,19 +53,19 @@ class Read_Config:
         log_time = time.strftime("%Y_%m_%d")
 
         log_name = self.back_path + log_time + '.log'
-        print(log_name)
+        #print(log_name)
         log = logging.getLogger()
-        log.setLevel(logging.DEBUG)
+        log.setLevel(logging.INFO)
         # 设置FileHandler日志文件
         fh = logging.FileHandler(log_name, 'w',
                                  encoding='utf-8')
-        fh.setLevel(logging.DEBUG)
+        fh.setLevel(logging.INFO)
         # 设置日志格式
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         fh.setFormatter(formatter)
         # 设置控制台输出log
         ch = logging.StreamHandler()
-        ch.setLevel(logging.DEBUG)
+        ch.setLevel(logging.INFO)
         log.addHandler(fh)
         log.addHandler(ch)
         # 添加下面一句，在记录日志之后移除句柄

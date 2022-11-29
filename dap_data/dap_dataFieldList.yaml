@@ -1,0 +1,4 @@
+adddataField_url: "/back/dap/index/domain"
+adddataField_json: {"domainNameCn":["mysql+gauss","mysql+mysql","hive+gauss","gauss+gauss","hive+mysql"],"remark":""}
+dataFieldpage_url: "/back/dap/index/domain/page1"
+dataFieldpage_json: {"pageRequest":{"pageNo":1,"pageSize":20,"order":[{"prop":"id","asc":false}]}}
