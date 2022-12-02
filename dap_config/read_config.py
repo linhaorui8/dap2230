@@ -64,16 +64,16 @@ class Read_Config:
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         fh.setFormatter(formatter)
         # 设置控制台输出log
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.INFO)
+        # ch = logging.StreamHandler()
+        # ch.setLevel(logging.INFO)
         log.addHandler(fh)
-        log.addHandler(ch)
+       # log.addHandler(ch)
         # 添加下面一句，在记录日志之后移除句柄
         # log.removeHandler(ch)
         # log.removeHandler(fh)
         # 关闭文件
         fh.close()
-        ch.close()
+      #  ch.close()
         return log
 
 

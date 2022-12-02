@@ -13,10 +13,14 @@ class dapDataSourceList(HttpClient):
         self.get_headers = self.token['get_header']
 
     def sources_list(self):
-        choice_sources_url = self.host['host'] + self.data['choice_sources_url']
-        choice_sources_api = self.httpclient.get(choice_sources_url, headers=self.get_headers)
-        source_ids = choice_sources_api.json()
-        return source_ids
+        """查询数据源接口"""
+        try:
+            choice_sources_url = self.host['host'] + self.data['choice_sources_url']
+            choice_sources_api = self.httpclient.get(choice_sources_url, headers=self.get_headers)
+            source_ids = choice_sources_api.json()
+            return source_ids
+        except Exception as e:
+            print('接口请求异常',e)
 
     def add_datasource(self):
         """新增数据源"""

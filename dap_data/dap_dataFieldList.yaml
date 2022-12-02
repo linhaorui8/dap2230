@@ -1,4 +1,12 @@
 adddataField_url: "/back/dap/index/domain"
-adddataField_json: {"domainNameCn":["mysql+gauss","mysql+mysql","hive+gauss","gauss+gauss","hive+mysql"],"remark":""}
+#adddataField_json: {"domainNameCn":["hive+hive","hive+mysql","hive+gauss","mysql+hive","mysql+mysql","mysql+gauss","gauss+hive","gauss+mysql","gauss+gauss"],"remark":""}
+adddataField_json: {"domainNameCn":["mysql+gauss","gauss+mysql"],"remark":""}
 dataFieldpage_url: "/back/dap/index/domain/page1"
 dataFieldpage_json: {"pageRequest":{"pageNo":1,"pageSize":20,"order":[{"prop":"id","asc":false}]}}
+userpage_url: "/back/common/user/user/page"
+adduserauth_url: "/back/dap/index/userdomain/userauth/"
+adduserauth_json: {"1":[10009,10002,10004,10005,10008],"2":[10009,10002,10004,10005,10008]}
+datasourcelist_url: "/back/dap/index/datasource/list"
+datasourcelist_json: {"state":1}
+setdomaindb_url: "/back/dap/index/domaindb/setdomaindb"
+setdomaindb_json: {"dataSourceList":[2],"domainId":2,"logicDatabase":6,"resultDatabase":6,"summaryDatabase":6}

@@ -42,7 +42,7 @@ class HttpClient:
 
             if method == 'POST':
                 resp = self.__session.post(url, data, json, **kwargs)
-                self.log.info(f'url:{resp.url},status_code:{resp.status_code},text:{resp.text}')
+                self.log.info(f'url:{resp.url},status_code:{resp.status_code},parmas:{resp.request}text:{resp.text}')
 
                 # if resp.status_code == 200 and resp.headers['Content-Type'] == "application/json;":
                 #     self.log.info(f'url:{resp.url},status_code:{resp.status_code},json:{resp.json()}')
