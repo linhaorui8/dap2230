@@ -41,7 +41,8 @@ class SmsLogin(HttpClient):
 
             write_yaml(header)
         except Exception as e:
-            print('登录异常%s'%str(e))
+            raise Exception('登录异常%s'%str(e))
+
 
 
 if __name__ == '__main__':

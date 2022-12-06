@@ -1,0 +1,10 @@
+businessdef_url: "/back/dap/index/businessdef"
+businessdef_json: {"domainId":2,"busiName":"auto_交通业务","enName":"auto_jtwork","remark":"pythonNUM1"}
+
+businessdefpage_url: "/back/dap/index/businessdef/page"
+businessdefpage_json: {"pageRequest":{"pageNo":1,"pageSize":20,"order":[{"prop":"id","asc":false}]}}
+
+adddimdef_url: "/back/dap/index/dimdef"
+adddimdef_json: {"type":"1","domainId":2,"tableId":"","dbId":2,"srcDbType":1,"dimNameCn":"auto_area_","tabName":"auto_area_","dimDesc":"","srcTabName":"area","srcPkColName":"area_code","pkColId":21,"colName":"\"area_code\"","colDesc":"区域编码","colType":"CHARACTER VARYING","colExpress":"select area_code from area","srcDbId":2}
+addsrc_url: "/back/dap/index/tabcols/addsrc"
+addsrc_json: {"id":null,"colName":"area_code","colDesc":"区域编码","colType":"varchar","colLength":100,"colPrecision":null,"keyFlag":"1","nullable":"0","dbId":2,"tableName":"area","colSeq":null,"srcDbId":2,"domainId":2,"tableComment":"区域编码"}

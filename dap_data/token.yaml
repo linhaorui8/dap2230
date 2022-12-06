@@ -1,11 +1,11 @@
 {
     "get_header": {
-        "X-CSRF-TOKEN": "9be50ac6-cc16-413d-b321-06db42fd1a48-78562213",
-        "Cookie": "JSESSIONID=76cf1011-2e27-4f03-8d23-bdce5ca717b8-17990183"
+        "X-CSRF-TOKEN": "c85ed69b-41f7-49ff-9f15-5a0e022d8fd4-50147543",
+        "Cookie": "JSESSIONID=2bf7a030-aab4-4ffe-a230-4dae0408d949-76875285"
     },
     "post_header": {
-        "X-CSRF-TOKEN": "9be50ac6-cc16-413d-b321-06db42fd1a48-78562213",
-        "Cookie": "JSESSIONID=76cf1011-2e27-4f03-8d23-bdce5ca717b8-17990183",
+        "X-CSRF-TOKEN": "c85ed69b-41f7-49ff-9f15-5a0e022d8fd4-50147543",
+        "Cookie": "JSESSIONID=2bf7a030-aab4-4ffe-a230-4dae0408d949-76875285",
         "Content-Type": "application/json;"
     }
 }
