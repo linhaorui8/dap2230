@@ -14,3 +14,5 @@ class dapfactLogicTable(HttpClient):
         self.token = load_yaml('token.yaml')
         self.post_headers = self.token['post_header']
         self.get_headers = self.token['get_header']
+
+    def

@@ -47,18 +47,19 @@ class dapdimenSionList(HttpClient):
         """返回维度的pkColid"""
         addsrc_api = None
         try:
-            domain_ids = dapDataFieldList().domain_page1()
-            dataSource_ids = dapDataFieldList().datasourcelist()
+
+            # dataSource_ids = dapDataFieldList().datasourcelist()
             addsrc_url = self.host['host'] + self.data['addsrc_url']
             addsrc_json = self.data['addsrc_json']
-            for domain_id in range(len(domain_ids) - 1):
-                if domain_ids[domain_id]['domainNameCn'] == "mysql+gauss":
-                    addsrc_json['domainId'] = domain_ids[domain_id]['id']
-                for dt_id in range(len(dataSource_ids)):
-                    """判断数据源是mysql，则传入dataSource_id; 物化源是gauss,传入logicSource_id"""
-                    if 'mysql' in dataSource_ids[dt_id]['name'] and dataSource_ids[dt_id]['dbUseType'] == 1:
-                        addsrc_json['dbId'] = dataSource_ids[dt_id]['id']
-                        addsrc_json['srcDbId'] = dataSource_ids[dt_id]['id']
+            dapDataFieldList().domain_page2(2,addsrc_json)
+            # for domain_id in range(len(domain_ids) - 1):
+            #     if domain_ids[domain_id]['domainNameCn'] == "mysql+gauss":
+            #         addsrc_json['domainId'] = domain_ids[domain_id]['id']
+            #     for dt_id in range(len(dataSource_ids)):
+            #         """判断数据源是mysql，则传入dataSource_id; 物化源是gauss,传入logicSource_id"""
+            #         if 'mysql' in dataSource_ids[dt_id]['name'] and dataSource_ids[dt_id]['dbUseType'] == 1:
+            #             addsrc_json['dbId'] = dataSource_ids[dt_id]['id']
+            #             addsrc_json['srcDbId'] = dataSource_ids[dt_id]['id']
             addsrc_api = self.post(addsrc_url, headers=self.post_headers, json=addsrc_json)
             return addsrc_api.json()['id']
         except Exception as e:
@@ -91,6 +92,7 @@ class dapdimenSionList(HttpClient):
 
 if __name__ == '__main__':
     dim = dapdimenSionList()
-    # dim.add_businessdef()
+    print(dim.add_businessdef().text)
+   # dim.businessdef_page()
     # dim.add_src()
-    dim.add_dimdef()
+   # dim.add_dimsrc()

@@ -42,12 +42,12 @@ class HttpClient:
 
             if method == 'POST':
                 resp = self.__session.post(url, data, json, **kwargs)
-                self.log.info(f'url:{resp.url},status_code:{resp.status_code},parmas:{resp.request}text:{resp.text}')
+                #self.log.info(f'url:{resp.url},status_code:{resp.status_code},parmas:{resp.request}text:{resp.text}')
 
-                # if resp.status_code == 200 and resp.headers['Content-Type'] == "application/json;":
-                #     self.log.info(f'url:{resp.url},status_code:{resp.status_code},json:{resp.json()}')
-                # else:
-                #     self.log.info(f'url:{resp.url},status_code:{resp.status_code},json:{resp.text}')
+                if resp.status_code == requests.codes.ok:
+                    self.log.info(f'url:{resp.url},status_code:{resp.status_code},json:{resp.text}')
+                else:
+                    self.log.error(f'url:{resp.url},status_code:{resp.status_code},json:{resp.text}')
             if method == 'PUT':
                 resp = self.__session.put(url, json, **kwargs)
                 self.log.info(f'url:{resp.url},status_code:{resp.status_code},text:{resp.text}')

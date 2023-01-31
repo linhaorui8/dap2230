@@ -27,3 +27,4 @@ print(result)
 id = [1,2,3]
 for i in range(len(id)):
     print(id[i])
+

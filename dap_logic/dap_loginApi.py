@@ -7,7 +7,7 @@ class SmsLogin(HttpClient):
     def __init__(self):
         super().__init__()
         self.httpclient = HttpClient()
-        self.login = load_yaml('login.yaml')
+        self.login = load_yaml('login2.yaml')
 
     def webkit_login(self):
         try:
@@ -23,9 +23,10 @@ class SmsLogin(HttpClient):
                                                  , allow_redirects=False)
             # print(login_success.status_code)
             login_token = self.httpclient.get(login_success.headers['Location'], headers=login_headers,allow_redirects=False)
-            # print(login_token.status_code)
+            print(login_token.url)
+            print(login_token.request.headers)
             request_cookies = login_token.cookies.get_dict()
-            # print(request_cookies)
+            print(request_cookies)
             # print(login_token.headers)
             get_cookies = 'JSESSIONID={0}'.format(request_cookies['JSESSIONID'])
             # print(get_cookies)
@@ -41,7 +42,7 @@ class SmsLogin(HttpClient):
 
             write_yaml(header)
         except Exception as e:
-            raise Exception('登录异常%s'%str(e))
+            raise Exception('登录异常%s'%repr(e))
 
 
 

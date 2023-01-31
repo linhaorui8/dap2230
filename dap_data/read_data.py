@@ -6,34 +6,41 @@ import pickle
 import yaml
 
 path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
 # print(path)
 
 
 def load_yaml(file_path):
     try:
         data_file_path = os.path.join(path, 'dap_data', file_path)
-        #print(data_file_path)
+        # print(data_file_path)
         with open(data_file_path, mode='r', encoding='utf-8') as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
+
     except Exception as e:
-        print('打开yaml文件异常', e)
+        print('打开yaml文件异常', repr(e))
     else:
         return data
     finally:
         f.close()
+
+
 
 def write_yaml(values):
     try:
         file_path = 'token.yaml'
         data_file_path = os.path.join(path, 'dap_data', file_path)
         with open(data_file_path, mode='w+', encoding='utf-8') as tf:
-            json.dump(values, tf, indent=4,ensure_ascii=False)
+            json.dump(values, tf, indent=4, ensure_ascii=False)
     except Exception as e:
         print('写入yaml文件异常', e)
     finally:
         tf.close()
+
+
 if __name__ == '__main__':
-    aa =load_yaml('login.yaml')
+    aa = load_yaml('login1.yaml')
     print(aa['login_url']['url'])
 
 #
